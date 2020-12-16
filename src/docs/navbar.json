@@ -1,0 +1,9 @@
+{
+  "title": "Navbar",
+  "options": [
+    {
+      "name": "background",
+      "value": "Background color of the navbar"
+    }
+  ]
+}

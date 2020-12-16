@@ -1,24 +1,43 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import styled, { ThemeProvider } from "styled-components";
+import { BrowserRouter as Router } from "react-router-dom";
+import { Navbar } from "components";
+import { theme } from "theme";
+
+const components = [Navbar];
+
+const StyledBlock = styled.div`
+  position: relative;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+`;
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <ThemeProvider theme={theme}>
+        <StyledBlock>
+          <Navbar
+            navbarIcon="https://cdn.jsdelivr.net/gh/low6dev/fiver-react-assets@main/AFTV-App-Nav-Icon.png"
+            navbarWidth="500px"
+            background="black"
+            colorPrimary="red"
+            items={[
+              {
+                to: "/my-picks",
+                text: "My Picks",
+                icon: "format_list_numbered",
+              },
+              { to: "/leaderboard", text: "Leaderboard", icon: "emoji_events" },
+              { to: "/wallet", text: "Wallet", icon: "account_balance_wallet" },
+              { to: "/profile", text: "Profile", icon: "person" },
+            ]}
+          />
+        </StyledBlock>
+      </ThemeProvider>
+    </Router>
   );
 }
 
