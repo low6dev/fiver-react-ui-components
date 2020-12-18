@@ -1,4 +1,5 @@
 import React from "react";
+import styled from "styled-components";
 import { Page } from "examples/shared";
 import { Navbar } from "components";
 import docs from "./docs";

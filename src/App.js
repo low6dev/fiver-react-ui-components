@@ -6,6 +6,7 @@ import {
   NavbarExample,
   NavbarSimpleExample,
   BlockButtonExample,
+  StepperExample,
 } from "examples";
 
 function App() {
@@ -15,6 +16,7 @@ function App() {
         <NavbarExample />
         <NavbarSimpleExample />
         <BlockButtonExample />
+        <StepperExample />
       </ThemeProvider>
     </Router>
   );

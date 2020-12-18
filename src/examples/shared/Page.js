@@ -8,6 +8,10 @@ const StyledPage = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
+
+  @media (max-width: ${(props) => props.theme.screenWidthLg}) {
+    flex-direction: column;
+  }
 `;
 
 const StyledDocs = styled.div`
@@ -18,6 +22,11 @@ const StyledDocs = styled.div`
   align-items: center;
   background: #fafafa;
   padding: 4rem;
+
+  @media (max-width: ${(props) => props.theme.screenWidthLg}) {
+    flex: 1 1 100%;
+    width: 100%;
+  }
 `;
 
 const StyledComponent = styled.div`
@@ -27,10 +36,15 @@ const StyledComponent = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: center;
+
+  @media (max-width: ${(props) => props.theme.screenWidthLg}) {
+    flex: 1 1 100%;
+    width: 100%;
+    min-height: 200px;
+  }
 `;
 
 const Page = ({ children, docs }) => {
-  console.log("docs", docs);
   return (
     <StyledPage>
       <StyledDocs>

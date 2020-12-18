@@ -1,0 +1,23 @@
+{
+  "title": "Stepper",
+  "options": [
+    {
+      "name": "steps",
+      "purpose": "The list of steps to be displayed",
+      "default": "",
+      "type": "Array"
+    },
+    {
+      "name": "activeStep",
+      "purpose": "The index of the active step currently being viewed",
+      "default": "0",
+      "type": "Number"
+    },
+    {
+      "name": "onStepClicked",
+      "purpose": "Function called when each step is clicked, passes the index of the step that has been clicked",
+      "default": "",
+      "type": "Function"
+    }
+  ]
+}
