@@ -2,7 +2,7 @@
   "name": "fiver-react-ui-components",
   "main": "dist/index.js",
   "module": "dist/index.js",
-  "version": "0.1.8",
+  "version": "0.2.1",
   "dependencies": {
     "@testing-library/jest-dom": "^5.11.6",
     "@testing-library/react": "^11.2.2",

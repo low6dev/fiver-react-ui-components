@@ -1,0 +1,62 @@
+{
+  "title": "Block Button",
+  "options": [
+    {
+      "name": "children",
+      "purpose": "The content inside of the button"
+    },
+    {
+      "name": "onClick",
+      "purpose": "Function when button is clicked, a HTML button will be rendered if this prop is passed"
+    },
+    {
+      "name": "to",
+      "purpose": "React Router NavLink will be rendered if this prop is passed"
+    },
+    {
+      "name": "size",
+      "purpose": "Overall sizing of the component in terms of padding and fontSize",
+      "type": "String from 'sm' or 'xs",
+      "default": "md"
+    },
+    {
+      "name": "fixedWidth",
+      "purpose": "Set a fixed button width",
+      "default": "100%"
+    },
+    {
+      "name": "colorBackground",
+      "purpose": "Background color of the button"
+    },
+    {
+      "name": "colorBackgroundDisabled",
+      "purpose": "Background color of the button in disabled state"
+    },
+    {
+      "name": "colorText",
+      "purpose": "Text color of the button"
+    },
+    {
+      "name": "colorTextDisabled",
+      "purpose": "Text color of the button in disabled state"
+    },
+    {
+      "name": "isDarkButton",
+      "purpose": "If set to 'true' a white spinner will be shown when loading",
+      "type": "Boolean",
+      "default": "true"
+    },
+    {
+      "name": "isLoading",
+      "purpose": "Sets the button into a loading state and a spinner will be shown",
+      "type": "Boolean",
+      "default": "false"
+    },
+    {
+      "name": "isUppercase",
+      "purpose": "Sets all text to be upppercase",
+      "type": "Boolean",
+      "default": "false"
+    }
+  ]
+}

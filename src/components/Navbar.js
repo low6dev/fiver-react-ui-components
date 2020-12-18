@@ -4,7 +4,7 @@ import { rgba } from "polished";
 import { NavLink } from "react-router-dom";
 
 const StyledWrapper = styled.div`
-  position: fixed;
+  position: ${(p) => p.position || "fixed"};
   z-index: 5;
   bottom: 0;
   left: 0;
@@ -74,9 +74,9 @@ const StyledButtonText = styled.div`
 `;
 
 const StyledBgWrapper = styled.div`
-  position: fixed;
+  position: absolute;
   z-index: -1;
-  bottom: -4px;
+  bottom: -2px;
   left: 50%;
   transform: translateX(-50%);
 `;
@@ -101,17 +101,19 @@ const StyledIcon = styled.span`
 `;
 
 const Navbar = ({
-  background,
-  colorPrimary,
+  position,
+  colorBackground,
+  colorIcon,
+  colorLink,
+  colorLinkActive,
   items,
   navbarIcon,
   navbarWidth,
 }) => {
   const itemsLeft = [items[0], items[1]];
   const itemsRight = [items[2], items[3]];
-
   return (
-    <StyledWrapper navbarWidth={navbarWidth}>
+    <StyledWrapper position={position} navbarWidth={navbarWidth}>
       <StyledBgWrapper>
         <StyledSvg
           height="80"
@@ -120,12 +122,12 @@ const Navbar = ({
         >
           <StyledPath
             d="M0 0V90H376V0H260C243.984 0 231 12.9837 231 29V27.75V27H230.992C230.997 27.2494 231 27.4994 231 27.75C231 49.3965 211.972 66.9444 188.5 66.9444C165.028 66.9444 146 49.3965 146 27.75C146 27.4994 146.003 27.2494 146.008 27H146V27.75V29C146 12.9837 133.016 0 117 0H0Z"
-            fill={background}
+            fill={colorBackground}
           />
         </StyledSvg>
       </StyledBgWrapper>
 
-      <StyledColumnLeft background={background}>
+      <StyledColumnLeft background={colorBackground}>
         {itemsLeft.map((item, index) => (
           <StyledButton to={item.to}>
             <StyledIcon className="material-icons">{item.icon}</StyledIcon>
@@ -133,10 +135,10 @@ const Navbar = ({
           </StyledButton>
         ))}
       </StyledColumnLeft>
-      <StyledNavbarIcon background={colorPrimary}>
+      <StyledNavbarIcon background={colorIcon}>
         <StyledIconImage src={navbarIcon} />
       </StyledNavbarIcon>
-      <StyledColumnRight background={background}>
+      <StyledColumnRight background={colorBackground}>
         {itemsRight.map((item, index) => (
           <StyledButton to={item.to}>
             <StyledIcon className="material-icons">{item.icon}</StyledIcon>

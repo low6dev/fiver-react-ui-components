@@ -1,0 +1,41 @@
+{
+  "title": "Navbar Simple",
+  "options": [
+    {
+      "name": "items",
+      "purpose": "The list of navbar items",
+      "default": "",
+      "type": "Array"
+    },
+    {
+      "name": "position",
+      "purpose": "CSS position property used on wrapper",
+      "default": "fixed",
+      "type": "String"
+    },
+    {
+      "name": "colorBackground",
+      "purpose": "Background color of the navbar wrapper",
+      "default": "black",
+      "type": "String"
+    },
+    {
+      "name": "colorLink",
+      "purpose": "Color of the navbar link before the route is active",
+      "default": "",
+      "type": "String"
+    },
+    {
+      "name": "colorLinkActive",
+      "purpose": "Color of the navbar link when the route is active",
+      "default": "",
+      "type": "String"
+    },
+    {
+      "name": "navbarWidth",
+      "purpose": "Width of the navbar when page is in desktop mode",
+      "default": "",
+      "type": "String"
+    }
+  ]
+}
